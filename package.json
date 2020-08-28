@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --disable-host-check --public-host=http://alex.onclass.tech",
     "build": "webpack",
     "github:deploy": "gh-pages -d dist",
     "github:build:deploy": "npm run build && gh-pages -d dist"

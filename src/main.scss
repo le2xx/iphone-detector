@@ -1,15 +1,90 @@
 @import './scss/variables';
 @import './scss/fonts';
 
+html {
+  //overflow: hidden;
+  //position: relative;
+  //height: 100%;
+}
+
 body {
-  background: $bg-color;
+  //overflow: hidden;
+  //position: relative;
+  //height: 100%;
+}
+
+body {
+  background: $body-color;
+  border: 2px dashed #0099ff;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+  font-size: 14px;
   margin: 0;
 }
 
 .app {
+  background: $app-color;
+  border: 2px dashed #0099ff;
+  border-radius: 30px;
+  box-sizing: border-box;
   align-items: center;
-  height: 100vh;
+  height: 2000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 10px;
+
+  .info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    right: 20px;
+
+    .name {
+      color: darkmagenta;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    .orientation {
+      color: darkred;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    .size {
+      color: #0c2e17;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 40px;
+    }
+  }
+
+  .footer {
+    background: #5AB3E4;
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 84px;
+    justify-content: space-around;
+    padding: 10px 0 0 0;
+
+    &.expand {
+      height: 50px;
+    }
+
+    .icon {
+      background: #FFFFFF;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+    }
+  }
 }
