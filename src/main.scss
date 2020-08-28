@@ -1,0 +1,15 @@
+@import './scss/variables';
+@import './scss/fonts';
+
+body {
+  background: $bg-color;
+  margin: 0;
+}
+
+.app {
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
