@@ -149,12 +149,8 @@ export class IPhoneDetector {
       availHeight: window.screen.availHeight,
       width: window.screen.width,
       height: window.screen.height,
-      isPortrait: window.screen.orientation ?
-          (window.screen.orientation.type === 'portrait-primary' || window.screen.orientation.type === 'portrait-secondary')
-          : window.screen.height > window.screen.width,
-      isLandscape: window.screen.orientation ?
-          (window.screen.orientation.type === 'landscape-primary' || window.screen.orientation.type === 'landscape-secondary')
-          : window.screen.height < window.screen.width
+      isPortrait: window.orientation ? window.orientation === 0 : true,
+      isLandscape: window.orientation ? window.orientation === 90 : false
     };
   }
 
