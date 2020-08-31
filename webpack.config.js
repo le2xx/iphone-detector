@@ -15,6 +15,9 @@ module.exports = {
     port: 4201,
     hot: true
   },
+  resolve: {
+    extensions: ['.js', '.ts']
+  },
   module: {
     rules: [
       {

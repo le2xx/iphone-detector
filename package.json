@@ -41,6 +41,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "rxjs": "^6.6.2",
     "surge": "^0.21.6"
   }
 }

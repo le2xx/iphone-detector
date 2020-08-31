@@ -15,7 +15,7 @@ body {
 
 body {
   background: $body-color;
-  border: 2px dashed #0099ff;
+  border: 2px dashed $body-border;
   box-sizing: border-box;
   font-family: arial, sans-serif;
   font-size: 14px;
@@ -24,7 +24,7 @@ body {
 
 .app {
   background: $app-color;
-  border: 2px dashed #0099ff;
+  border: 2px dashed $app-border;
   border-radius: 30px;
   box-sizing: border-box;
   align-items: center;
@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
+  margin: 10px 10px 94px 10px;
 
   .info {
     align-items: center;
@@ -44,20 +44,20 @@ body {
     right: 20px;
 
     .name {
-      color: darkmagenta;
+      color: $name;
       font-size: 22px;
       font-weight: bold;
       line-height: 24px;
     }
 
     .orientation {
-      color: darkred;
+      color: $orientation;
       font-size: 18px;
       line-height: 30px;
     }
 
     .size {
-      color: #0c2e17;
+      color: $size;
       font-size: 30px;
       font-weight: bold;
       line-height: 40px;
@@ -65,7 +65,7 @@ body {
   }
 
   .footer {
-    background: #5AB3E4;
+    background: $footer;
     box-sizing: border-box;
     display: flex;
     position: fixed;
@@ -75,8 +75,9 @@ body {
     height: 84px;
     justify-content: space-around;
     padding: 10px 0 0 0;
+    transition: height 200ms ease-in-out;
 
-    &.expand {
+    &.expanded {
       height: 50px;
     }
 
