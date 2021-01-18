@@ -8,6 +8,7 @@ let screenOptions: IScreen;
 const name = document.querySelector('.name');
 const orientation = document.querySelector('.orientation');
 const size = document.querySelector('.size');
+const os = document.querySelector('.os');
 const footer = document.querySelector('.footer');
 
 window.onload = () => {
@@ -15,6 +16,7 @@ window.onload = () => {
     setName();
     setOrientation();
     setSize();
+    setOs();
     expandTools();
   }, 1000);
 };
@@ -36,6 +38,7 @@ iPhoneDetector.screenOptions$.subscribe(options => {
   setName();
   setOrientation();
   setSize();
+  setOs();
   expandTools();
 });
 
@@ -53,6 +56,10 @@ const setOrientation = () => {
 
 const setSize = () => {
   size.innerHTML = `${window.innerWidth}x ${window.innerHeight}`;
+}
+
+const setOs = () => {
+  os.innerHTML = iPhoneDetector.isIPhone ? `Os ver: ${iPhoneDetector.osVersion}` : 'no Iphone';
 }
 
 const expandTools = () => {

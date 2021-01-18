@@ -11,6 +11,7 @@ export interface IScreen {
 }
 
 export enum EIPhones {
+  XI_Pro_Max_14 = 'XI_Pro_Max_14',
   XI_Pro_Max = 'XI_Pro_Max',
   XI_Pro = 'XI_Pro',
   XI = 'XI',
@@ -34,6 +35,16 @@ export interface IIPhonesProperties {
 }
 
 const devices: { [key: string]: IIPhonesProperties } = {
+  [EIPhones.XI_Pro_Max_14]: {
+    logicalWidth: 414,
+    logicalHeight: 896,
+    innerHeightP: 833,
+    innerHeightL: 414,
+    innerHeightPExpand: 719,
+    innerHeightLExpand: 364,
+    devicePixelRatio: 3,
+    osVersion: 14
+  },
   [EIPhones.XI_Pro_Max]: {
     logicalWidth: 414,
     logicalHeight: 896,
